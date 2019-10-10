@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.codingbingo.fastreader"
         minSdkVersion 15
@@ -27,24 +27,24 @@ android {
 
 dependencies {
     //greenDao
-    compile 'org.greenrobot:greendao:3.2.0'
+    implementation 'org.greenrobot:greendao:3.2.0'
 
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
-    testCompile 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:23.4.0'
+    implementation 'com.android.support:design:23.4.0'
+    testImplementation 'junit:junit:4.12'
 
     // LeanCloud 基础包
-    compile('cn.leancloud.android:avoscloud-sdk:v3.+')
+    implementation('cn.leancloud.android:avoscloud-sdk:v3.+')
     // LeanCloud 统计包
-    compile('cn.leancloud.android:avoscloud-statistics:v3.+')
+    implementation('cn.leancloud.android:avoscloud-statistics:v3.+')
     // 推送与实时聊天需要的包
-    compile('cn.leancloud.android:avoscloud-push:v3.+@aar') { transitive = true }
+    implementation('cn.leancloud.android:avoscloud-push:v3.+@aar') { transitive = true }
 
-    compile 'org.greenrobot:eventbus:3.1.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
     //发布到线上的时候删除
-    compile 'com.facebook.stetho:stetho:1.4.2'
+    implementation 'com.facebook.stetho:stetho:1.4.2'
 }
