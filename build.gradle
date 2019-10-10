@@ -2,6 +2,7 @@
 
 buildscript {
     repositories {
+        google()
         jcenter()
         mavenCentral()
         //这里是 LeanCloud 的包仓库
@@ -10,12 +11,13 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:.5.1'
     }
 }
 
 allprojects {
     repositories {
+        google()
         jcenter()
         //这里是 LeanCloud 的包仓库
         maven {
